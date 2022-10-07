@@ -26,6 +26,7 @@ variable_2 = variable_2 + "10"
 //alert(variable_1.length)
 
 console.log("Hola mundo")
+var arepas_vacias=[]
 
 var arepas = ["Arepa Rellena","Arepa Queso", "Arepa sencilla"]
 
@@ -64,11 +65,11 @@ console.log(menorIgual)
 
 if(1 != 1){
     alert("Esto es verdadero");
-}else if(2===2.0){
+}else if(21===2.0){
     alert("Esto es verdadero x 2");
 }
 else{
-    alert("esto es falso")
+    //alert("esto es falso")
 }
 
 
@@ -76,7 +77,7 @@ var areparellena = 5000;
 var arepaQueso = 10000;
 var arepaCarne = 15000;
 
-var bolsillo = 12000;
+var bolsillo = 1;
 
 
 if(bolsillo >= areparellena){
@@ -96,7 +97,7 @@ if(bolsillo >= arepaCarne){
 
 
 var valoresArepas = [5000,10000,15000]
-var bolsillo = 12000;
+var bolsillo = 1;
 
 if(bolsillo >= valoresArepas[0]){
     var cantidad = bolsillo / valoresArepas[0]
@@ -114,13 +115,47 @@ if(bolsillo >= valoresArepas[2]){
 }
 
 var valoresArepas = [5000,10000,15000,9000]
-bolsillo = 12000
+bolsillo = 1
 for(var i=0; i<valoresArepas.length; i++){
-    alert(valoresArepas[i])
+    //alert(valoresArepas[i])
     if(bolsillo >= valoresArepas[i]){
         alert("Puedo comprar una arepa de valor "+ valoresArepas[i])
     }
 }
+
+
+
+
+var palabra_ingresada = "122355484" 
+
+var palabra_alreves =""
+
+for(var i = palabra_ingresada.length-1;i>=0;i--){
+        palabra_alreves += palabra_ingresada[i]
+}
+
+console.log(palabra_alreves)
+
+
+console.log("1"==1)
+console.log("1"===1)
+
+console.log(false==0)
+console.log(false===0)
+
+console.log("5"+1)
+console.log("5"-1)
+
+
+var elementp = document.getElementById("myP")
+
+console.log(elementp)
+
+console.log(elementp.innerHTML)
+
+elementp.innerHTML="<p>"+palabra_alreves+"</p>"
+
+document.write()
 
 
 
