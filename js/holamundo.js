@@ -73,6 +73,8 @@ else{
 }
 
 
+// CONDICIONALES
+
 var areparellena = 5000;
 var arepaQueso = 10000;
 var arepaCarne = 15000;
@@ -114,6 +116,9 @@ if(bolsillo >= valoresArepas[2]){
     alert("Puedo comparar arepa carne unidades= "+cantidad)
 }
 
+
+// CILOS
+
 var valoresArepas = [5000,10000,15000,9000]
 bolsillo = 1
 for(var i=0; i<valoresArepas.length; i++){
@@ -122,8 +127,6 @@ for(var i=0; i<valoresArepas.length; i++){
         alert("Puedo comprar una arepa de valor "+ valoresArepas[i])
     }
 }
-
-
 
 
 var palabra_ingresada = "122355484" 
@@ -156,6 +159,110 @@ console.log(elementp.innerHTML)
 elementp.innerHTML="<p>"+palabra_alreves+"</p>"
 
 document.write()
+
+
+let rep = 1
+i= 1
+let n = 1
+
+while(i<n){
+    rep += rep * i;
+    i++;
+}
+
+console.log(rep)
+
+//elementp.innerHTML="<p> Factorial de "+ n + " = "+rep+"</p>"
+
+rep = 1
+i = 1
+n = 1
+do{
+    rep += rep * i;
+    i++;
+}while(i<n)
+
+//elementp.innerHTML="<p> Factorial con do while de "+ n + " = "+rep+"</p>"
+
+
+// FUNCION - METODOS PARADIGMA PROGRAMACION FUNCIONAL
+
+function holamundo(nombre){
+    //elementp.innerHTML="<p> HOLA MUNDO JAVASCRIPT "+nombre+"</p>"
+    return "<p> HOLA MUNDO JAVASCRIPT "+nombre+"</p>"
+}
+
+let rep_funcion = holamundo("Andres")
+elementp.innerHTML = rep_funcion
+
+
+const funcionAnonima = function(nombre){
+    return "<p> HOLA MUNDO JAVASCRIPT "+nombre+"</p>"
+}
+
+let rep_fun_anonima = funcionAnonima("Andres con funcioon anonima")
+elementp.innerHTML = rep_fun_anonima
+
+const funcionFlecha = (nombre)=>{
+    return "<p> HOLA MUNDO JAVASCRIPT "+nombre+"</p>"
+}
+
+let rep_funcion_flecha = funcionFlecha("Andres con funcion flecha")
+elementp.innerHTML = rep_funcion_flecha
+
+rep_funcion_flecha = "hola";
+
+
+(
+    function(nombre){
+        document.write("<p> Funciona Anonima llamada el mismo con parametro "+nombre+" </p>")
+    }
+)("Andres");
+
+
+function funA(){
+
+    function funB(nombre){
+        document.write(`llamado a la funcion B ${nombre}`)
+    }
+
+    document.write("llamado a la funcion A")
+
+    funB("Andres")
+}
+funA()
+
+
+function funC(){
+    return function(nombre){
+        document.write("Funcion Anonima Retornada"+nombre)
+    }
+}
+
+funC()("Oscar")
+
+
+const funcionAnonimaConFuncion = funC()
+
+console.log(funcionAnonimaConFuncion)
+
+funcionAnonimaConFuncion("Andres")
+
+
+var c = function(a,b){
+    document.write("</br>")
+    return a+b
+}
+
+var b = 0;
+b = c.apply(b,[2,3])
+document.write("llamada por medio de un apply "+b)
+b = c.call(b,3,4)
+document.write("llamada por medio de un call "+b)
+
+
+
+
 
 
 
