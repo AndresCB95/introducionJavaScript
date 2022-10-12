@@ -2,8 +2,6 @@
 
 var variable_1 = "Hola mundo en una variable";
 var variable_2 = 0;
-
-
 //alert(variable_1)
 //alert(variable_2)
 
