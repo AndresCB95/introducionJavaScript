@@ -1,6 +1,7 @@
 import datosreto, {dato} from './data.js'
 
-function resolver(arr){
+export function resolver(arr){
+    let pasos = []
     let bandera = false
     let n_array = arr.length
     let valor_ubicar = arr[n_array-1]
@@ -12,20 +13,22 @@ function resolver(arr){
             bandera = true
             break
         }
-        printArray(arr)
+        pasos.push(printArray(arr))
     }
 
     if(bandera===false){
         arr[0]=valor_ubicar
     }
-    printArray(arr)
-
+    pasos.push(printArray(arr))
+    return pasos
 }
 
 function printArray(arr){
-    elementp.innerHTML +=arr+"</br>"
+    //elementp.innerHTML +=arr+"</br>"
+    return arr+"</br>"
 }
 
+/*
 var elementp = document.getElementById("myP")
 
 for(let i=0; i<datosreto.length;i++){
@@ -36,3 +39,33 @@ for(let i=0; i<datosreto.length;i++){
     
     resolver(numeros)
 }
+
+ const getElemnt = (numeroN) => {
+    return datosreto.find(
+        (elemntoArray)=>elemntoArray["n_array"]==numeroN
+    )
+ }
+let objeto_find=getElemnt(10)
+
+console.log(objeto_find)
+ elementp.innerHTML += "Elemento encontrado con n array"+ objeto_find["n_array"]+ " y array"+ objeto_find["numeros"] + "</br>"
+
+
+
+ const getElemntFilter = (numeroN) => {
+
+    return datosreto.filter(
+
+        (elemntoArray)=>{
+            return elemntoArray["n_array"]>=numeroN
+        }
+
+    )
+ }
+
+let objeto_filter=getElemntFilter(5)
+
+console.log(objeto_filter)
+for( let i = 0; i<objeto_filter.length; i++){
+elementp.innerHTML += "Elemento encontrado en la posicion "+ i +" con n array"+ objeto_filter[i]["n_array"]+ " y array"+ objeto_filter[i]["numeros"]+"</br>"
+}*/
